@@ -17,14 +17,14 @@ public class AppOrderPositiveTest {
 
     @BeforeAll
     public static void setupAll() {
-        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
     }
     @BeforeEach
     public void beforeEach() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.get("http://localhost:9999");
     }
